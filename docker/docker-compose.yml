@@ -25,6 +25,9 @@ x-invokeai: &invokeai
         bind:
           create_host_path: true
       - ${HF_HOME:-~/.cache/huggingface}:${HF_HOME:-/invokeai/.cache/huggingface}
+      - type: bind
+        source: D:/AI/Models
+        target: /invokeai/external_models
     tty: true
     stdin_open: true
 
